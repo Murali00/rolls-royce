@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rolls royce</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+
+        
+
+        *{
+            box-sizing: border-box;
+        }
+
+        @keyframes example {
+         from {background-color: rgb(212, 255, 156);}
+         to {background-color: rgb(236, 140, 255);}
+         
+        }
+
+        @keyframes example1 {
+         from {background-color: rgb(146, 255, 119);}
+         to {background-color: rgb(255, 185, 139);}
+        }
+
+       
+
+        .header{
+            display: flex;
+            flex-direction: row;
+            height: 85px;
+            background-color:rgb(221, 221, 255);
+            justify-content: center;
+            animation-name: example;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            
+           
+
+            
+        }
+
+        .header > h1{
+            padding: 0 10px 0 10px;
+        }
+
+        div.nav{
+            background-color: rgb(200, 247, 248);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			padding: 10px;
+
+        }
+
+        div > a{
+            text-decoration: none;
+			display: inline;
+			padding-left: 30px;
+			padding-right: 30px;
+			font: bold;
+        }
+
+        div.column{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            margin-top: 5px;
+        }
+
+        div.left{
+            flex: 20%;
+            background-color: rgb(226, 255, 255);
+            height: 800px;
+        }
+
+        div.center{
+            flex: 60%;
+            margin-left: 0;
+            border: solid 1px rgb(4, 202, 216);
+        }
+
+        div.right{
+            flex:20%
+            
+        }
+
+        .center > img{
+            height: 500px;
+            width:900px
+            
+                       
+        }
+        .right > img{
+            height: 120px;
+            width: 180px;
+            margin-left: 15px;
+        }
+
+        @media screen and (max-width:1000px) {
+
+            div.column{
+                flex-direction: column;
+            }
+
+            div.nav{
+			background-color: rgb(187, 187, 187);
+			display: flex;
+			flex-direction: column;
+			text-align: end;
+			padding: 20px;
+
+		}	
+
+        .center > img{
+
+            height: 400px;
+            width:700px;
+            margin-left: 100px;
+            margin-right: auto;
+        }
+
+        div.center{
+            margin-top: 500px;
+           
+        }
+		
+		
+		.nav > a:hover{
+			background-color:burlywood ;
+
+			
+		}
+
+        @keyframes ani{
+         0%   { left:0px; top:0px;}
+        25%  { right:130px; top:0px;}
+        50%  { left:130px; top:500px;}
+        75%  { left:0px; top:500px;}
+        100% { left:0px; top:0px;}
+        }
+
+            
+            }
+
+        div.footer{
+            background-color: rgb(202, 255, 255);
+            height: 100px;
+            animation-name: example1;
+            animation-duration: 10s;
+        }
+
+
+        #ani{
+  position: relative;
+  animation-name: ani;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;  
+}
+
+@keyframes ani{
+  0%   { left:0px; top:0px;}
+  25%  { left:130px; top:0px;}
+  50%  { left:130px; top:500px;}
+  75%  { left:0px; top:500px;}
+  100% { left:0px; top:0px;}
+}
+
+
+    </style>
+
+</head>
+
+
+<body>
+ 
+    <div class="header">
+        <h1>Rolls</h1>
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHcAAABDCAMAAACRDGoDAAAAZlBMVEX+/v7///8QEBAAAAAMDAz6+vooKCjw8PA9PT3Nzc0EBATHx8cUFBRBQUG4uLhKSkpubm7b29ukpKTp6emXl5eDg4Ovr68gICB7e3s2Njbh4eFnZ2fT09OPj4+enp5SUlJbW1svLy9PqKLpAAADdklEQVRYhe2Z25aqMAyGjWlBAUEOCuqMyvu/5G6TwNTjVeree63JxQyHtfxom8OfdrH4tX/F4K+BX1hkapes7m1TXXf7OjIaOszuDcmGOiYZoMKlNwwsc/cG8ZTGBJfExXKyfbddIT/Dr3hgODLjxqmOOyIbXEcDg83MAxegXTG4jQUGWDLXlnlgKWw8GC+xgmrmwlfoWniUeSjttkwjkGfuAmr27KVxhj00NOAVbF1M6U/3D3fhCITlAO4A6UWbo4upRnvIITcnX0pSNjjRgPeW/m2VwSG3Za4Vnz4TcAccaEM8bmoMc/nNnrgnl0o5s6iCb7jFDbcULoMNWk3wGy479OBm/EBX3Ye4A9EaEIfLEk2V8Ibb0wuXosEmvkRh/Qmuy1+0qj5+JKSaj3CZ9e1v2LP4OjKXvdkg1X4JKc0QfsF1ZZken3nsjaSQyFxfnMiTruJiO/z5iChcVxBG61MkYavJtUmEYR6Li1jtcoDywJN8nbCtv5e11uZ6WXF0t22XkLhC577CEXc+xclXaVvn523PMtYpnFk/u3mgJ6rqUrgm6VlCG9YcQb0FuGDgY7pcEjfuD2uNsOwBJ5BMdXV/uKzminF7Xi98lhAJC5BeOIEoa/hpfZ12/aqdcIR0zSkSK/DN4h55tJoxFHK9P9tmqAo01jmS8coK0qbniOqP2oLyLn7RZIn7Ap8XTeEmnNdgUJUaj1x/afqmKan2urx4yERyaGMfub4DxQUNGGV1lSXdC64X7mcS7a7Q1x19gPryPhtvMlYnqkDZAThp4Kg+04/rO5JuJ5XjxBWLal0t+ZwresNLOa8wIMgin+B+o6g6/gLVYvSOm+OkYvlK2bVecu0k5YBaf1egPsMlmvfoqVHSXeFXXOnC/fQCB7Omen7H/ea2G0ROGqMaw7AwUo/uuc2s1SWYVUsh17ylVxPPuKb3XJsYbc/isdBg7rg7ftFOfZkxmtVw+vntA/fCL3xzIv2R4q7hvGlFqTiMI9635FokC6zn0eEm3fqWu5meF65OUBJxwazFtfl6ttwGXEjnN7lr8yFoSlXsdhOW2qBC8lV41gDGKC9w+A281s9GJXtnuilr/vHm1QaZdEgmibElDFCwal09/DrHkWRNdewO5Tjlfjr9xplYhKOOYdyIjXdgaFYV2+aqf8L25rTsY+dov/Yf2B+1aColoGpT5gAAAABJRU5ErkJggg==" alt="" >
+        <h1>Royce</h1>
+
+    </div>
+    
+    <div class="nav">
+
+        <a href="">Home</a>
+        <a href="">About</a>
+        <a href="">New-cars</a>
+        <a href="">Pre-owned cars</a>
+        <a href="">Services</a>
+        <a href="">Explore</a>
+        <a href="">Buy now</a>
+
+
+    </div>
+
+    <div class="column">
+
+        <div class="left">
+            <h2>Models</h2>
+            <ul>
+                <li>Phantom</li>
+                <li>Ghost</li>
+                <li>Cullinan</li>
+                <li>Rolls Royce Wraith</li>
+                <li>Rolls Royce Dawn</li>
+            </ul>
+        <div class="ani">
+            <img id="ani" src="https://www.carlogos.org/logo/Rolls-Royce-symbol-2048x2048.png" alt="" height="80px" width="80px">
+        </div>
+        </div>
+        <div class="center" id="hello">
+            <img src="https://www.rolls-roycemotorcars.com/content/dam/rrmc/marketUK/rollsroycemotorcars_com/1-0-home/page-properties/rrmc-homepage-ghost-share-image.jpg" alt="">
+            <p>Rolls-Royce was a British luxury car and later an aero-engine manufacturing business established in 1904 in Manchester by the partnership of Charles Rolls and Henry Royce. Building on Royce's good reputation established with his cranes, they quickly developed a reputation for superior engineering by manufacturing the "best car in the world". The business was incorporated as Rolls-Royce Limited in 1906, and a new factory in Derby was opened in 1908. The First World War brought the company into manufacturing aero-engines. Joint development of jet engines began in 1940, and they entered production. Rolls-Royce has built an enduring reputation for development and manufacture of engines for defence and civil aircraft.
+
+                In the late 1960s, Rolls-Royce was adversely affected by the mismanaged development of its advanced RB211 jet engine and consequent cost over-runs, though it ultimately proved a great success. In 1971, the owners were obliged to liquidate their business. The useful portions were bought by a new government-owned company named Rolls-Royce (1971) Limited, which continued the core business but sold the holdings in British Aircraft Corporation (BAC) almost immediately and transferred ownership of the profitable but now financially insignificant car division to Rolls-Royce Motors Holdings Limited, which it sold to Vickers in 1980. Rolls-Royce obtained consent to drop the '1971' distinction from its company name in 1977, at which point it became known once again as Rolls-Royce Limited.
+                
+                The Rolls-Royce business remained nationalised until 1987 when, after having re-named the company to Rolls-Royce plc, the British government sold it to the public in a share offering. Rolls-Royce plc still owns and operates Rolls-Royce's principal business, although, since 2003, it is technically a subsidiary of Rolls-Royce Holdings plc, a listed holding company.
+                
+                A marketing survey in 1987 showed that only Coca-Cola was a more widely known brand than Rolls-Royce.</p>
+
+        </div>
+
+
+        <div class="right">
+            <h2>Emblem</h2>
+            <img src="https://cdn.pixabay.com/photo/2019/04/08/22/03/emblem-4113111_1280.jpg" alt="">
+            <p style="margin: 20px;">The Rolls-Royce hood ornament name is the Spirit of Ecstasy. When does this Rolls-Royce hood emblem originate? The Rolls-Royce Spirit of Ecstasy dates all the way back to 1909, when the sculptor Charles Sykes captured the likeness of Eleanor Thornton.</p>
+            
+            <h2>Rolls royce</h2>
+            <img src="https://wallpapershome.com/images/pages/pic_v/9612.jpeg" alt="" style="height: 200px; width: 130px;">
+            <p style="padding: 5px; margin-left: 10%;" > The centre caps on the wheels of the Phantom – as with all Rolls-Royce cars – do not rotate. The caps are on bearings so the logo is always the right way up</p>
+     
+        </div>
+
+
+    </div>
+
+        <div class="footer" style="margin: 10px;">
+            <h3 style="text-align: center;">Contact us</h3>
+            <p style="float: left; color: blue;">Email:muralitharan413@gmail.com <br>Phone no:6382409842</p>
+            
+
+            <a href="#" style=" float: right;"> <img src="https://thumbs.dreamstime.com/b/web-187020751.jpg" alt="" style="height: 40px;"></a>
+        </div>
+
+
+
+
+
+</body>
+</html>
